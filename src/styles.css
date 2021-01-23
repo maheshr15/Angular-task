@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.col{
+    margin-top: 200px;
+}
+ 
+.password{
+    display: flex;
+}
+
+#posts-card .col-2 h5{
+    display: inline-flex;
+}
+
+.nav-item{
+    display: inline-flex;
+    
+}

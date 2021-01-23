@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="input-group mt-4" style="width: 350px;">
+        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchData" aria-label="Username" 
+        aria-describedby="basic-addon1">
+    </div>
+    <div class="card mt-4 p-2" style="width: 50rem;" id="posts-card">
+        <table style="line-height: 60px; ">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Website</th>
+            </tr>
+            <tr *ngFor="let user of users | filter: searchData" >
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.contact}}</td>
+                <td>{{user.website}}</td>
+                <td><a type="button" class="btn btn-primary" routerLink="/posts/{{user.id}}">Posts</a></td>
+            </tr>
+        </table>   
+    </div>    
+</div>
